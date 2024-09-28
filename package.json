@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.11.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2",
+    "sass": "^1.77.8",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
