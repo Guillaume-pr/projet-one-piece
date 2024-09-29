@@ -1,0 +1,220 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../img/background.png") center/cover;
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  width: 400px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+}
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+form input[type=text]:focus,
+form input[type=email]:focus,
+form input[type=password]:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+form button:hover {
+  background-color: #0062cc;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accueil-container {
+  background-color: rgba(36, 115, 139, 0.8);
+  border-radius: 30px;
+  width: 90%;
+  margin: 50px auto;
+}
+.accueil-container h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+.accueil-container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accueil-container p a {
+  color: rgb(23, 23, 23);
+}
+.accueil-container p a:hover {
+  color: white;
+  font-size: 1.1rem;
+  transition: 0.7s;
+}
+.accueil-container p a:not(:hover) {
+  transition: 0.3s;
+}
+.accueil-container .info1 {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 80% 20%;
+  grid-template-areas: "i1 i2" "ta ta";
+}
+.accueil-container .info1 img {
+  margin: 10px 0px 0px 10px;
+  border-radius: 90px;
+  width: 80%;
+}
+.accueil-container .info1 p {
+  margin-left: 50px;
+  margin-right: 100px;
+}
+.accueil-container .info1 .regle {
+  grid-area: ta;
+}
+
+.cartes ul {
+  display: flex;
+  width: 95%;
+}
+.cartes ul li {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+.cartes ul li .clickable-image {
+  width: 200px;
+  height: auto;
+  transition: all 0.3s ease-in-out; /* Animation pour agrandir/réduire l'image */
+  cursor: pointer;
+}
+.cartes ul li .image-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Largeur de la boîte */
+  max-height: 80vh; /* Hauteur maximale de la boîte */
+  background: rgba(69, 63, 63, 0.95); /* Fond légèrement transparent */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+.cartes ul li .enlarged-image {
+  width: 30%; /* Largeur de l'image dans la boîte */
+  height: auto;
+  margin-right: 10px;
+}
+.cartes ul li .carte-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+.cartes ul li .carte-details .nom {
+  text-transform: uppercase;
+}
+
+.navigation {
+  background-color: rgb(80, 108, 89);
+  height: 50px;
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 10px;
+}
+.navigation ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.navigation ul li {
+  cursor: pointer;
+  color: rgb(129, 15, 108);
+  font-size: 1.2rem;
+}
+.navigation ul li:hover {
+  color: rgb(23, 23, 23);
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+.navigation ul li:not(:hover) {
+  transition: 0.3s;
+}
+
+.nav-active {
+  position: relative;
+}
+.nav-active::after {
+  content: "";
+  height: 4px;
+  width: 0;
+  background-color: rgb(36, 115, 139);
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: anim 0.6s ease forwards;
+}
+@keyframes anim {
+  to {
+    width: 60%;
+  }
+}/*# sourceMappingURL=index.css.map */

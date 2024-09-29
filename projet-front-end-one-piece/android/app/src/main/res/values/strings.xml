@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">vogue merry</string>
+    <string name="title_activity_main">vogue merry</string>
+    <string name="package_name">sunny.fr</string>
+    <string name="custom_url_scheme">sunny.fr</string>
+</resources>

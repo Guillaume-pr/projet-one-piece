@@ -1,0 +1,115 @@
+
+
+
+$color1: rgb(80, 108, 89);
+$color2: rgb(36, 115, 139);
+$color3: rgb(129, 15, 108);
+$white: #efeaea;
+$black: rgb(23, 23, 23);
+
+$form-bg-color: #f9f9f9;
+$input-border-color: #ccc;
+$input-focus-border-color: #007bff;
+$input-padding: 10px;
+$label-color: #333;
+$button-bg-color: #007bff;
+$button-text-color: #fff;
+$button-hover-bg-color: darken($button-bg-color, 10%);
+$form-width: 400px;
+$form-padding: 20px;
+$border-radius: 5px;
+
+@mixin center-flex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  }
+  * {
+      margin: 0;    
+    padding: 0; 
+    letter-spacing: 1px;
+  }
+  body {
+        background: url('../img/background.png') center/cover;
+  
+    min-height: 100vh; 
+
+   
+    
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+  }
+
+
+
+  form {
+
+  width: $form-width;
+  padding: $form-padding;
+  background-color: $form-bg-color;
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: $label-color;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    padding: $input-padding;
+    margin-bottom: 15px;
+    border: 1px solid $input-border-color;
+    border-radius: $border-radius;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $input-focus-border-color;
+      outline: none;
+    }
+
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+
+  button {
+
+    width: 100%;
+    padding: $input-padding;
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    border: none;
+    border-radius: $border-radius;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $button-hover-bg-color;
+    }
+  }
+
+
+
+}
+
+
